@@ -2,9 +2,9 @@ name: Pandemic Tracker Build
 
 on:
   push:
-    branches: ["master","feature/*"]
+    branches: ["main","feature/*"]
   pull_request:
-    branches: ["master","feature/*"]
+    branches: ["main","feature/*"]
 
 jobs:
   build:
