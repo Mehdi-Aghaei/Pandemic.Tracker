@@ -5,6 +5,8 @@ VisualStudioVersion = 17.9.34607.119
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pandemic.Tracker.Web", "Pandemic.Tracker.Web\Pandemic.Tracker.Web.csproj", "{A49F7E08-3CEB-45C8-8855-CBDC46EA567E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pandemic.Tracker.Web.Unit.Tests", "Pandemic.Tracker.Web.Unit.Tests\Pandemic.Tracker.Web.Unit.Tests.csproj", "{B5F4D6C2-02A6-495A-9574-6CE2AC35595B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{A49F7E08-3CEB-45C8-8855-CBDC46EA567E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A49F7E08-3CEB-45C8-8855-CBDC46EA567E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A49F7E08-3CEB-45C8-8855-CBDC46EA567E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5F4D6C2-02A6-495A-9574-6CE2AC35595B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5F4D6C2-02A6-495A-9574-6CE2AC35595B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5F4D6C2-02A6-495A-9574-6CE2AC35595B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5F4D6C2-02A6-495A-9574-6CE2AC35595B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
