@@ -1,10 +1,19 @@
+// ---------------------------------------------------------------
+// Copyright (c) Coalition of the Good-Hearted Engineers
+// FREE TO USE TO CONNECT THE WORLD
+// ---------------------------------------------------------------
+
 using Pandemic.Tracker.Web.Components;
+using Pandemic.Tracker.Web.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
 	.AddInteractiveServerComponents();
+
+builder.Services.AddHttpClient();
+builder.Services.AddScoped<CountryService>();
 
 var app = builder.Build();
 

@@ -1,7 +1,25 @@
-﻿@page "/"
+﻿@inject CountryService CountryService;
+@attribute [StreamRendering]
+@page "/"
 
 <PageTitle>Home</PageTitle>
 
-<h1>Hello, world!</h1>
+@if(Countries.Length == 0)
+{
+	<p><em>Loading...</em></p>
+}
+@foreach (var country in Countries)
+{
+	<p>@country.Name</p>
+	<p>@country.Cases</p>
+}
 
-Welcome to your new app.
+
+@code {
+	public Country[] Countries { get; set; } = [];
+
+	protected override async Task OnInitializedAsync()
+	{
+		Countries = await CountryService.GetCountriesAsync();
+	}
+}
