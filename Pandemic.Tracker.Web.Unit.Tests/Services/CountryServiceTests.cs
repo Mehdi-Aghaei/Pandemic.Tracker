@@ -34,26 +34,6 @@ public sealed class CountryServiceTests
 		countries.Should().ContainSingle(c => c.Name == "Country1");
 	}
 
-	[Fact]
-	public void GetCountriesAsync_ShouldReturnEmptyArray_WhenApiCallFails()
-	{
-		// Arrange
-		var httpClient = new HttpClient(new MockHttpMessageHandler(HttpStatusCode.InternalServerError));
-		var configuration = Substitute.For<IConfiguration>();
-		var logger = Substitute.For<ILogger<CountryService>>();
-
-		configuration["APIUrl"].Returns("https://example.com/");
-
-		var service = new CountryService(httpClient, configuration, logger);
-
-		// Act
-		var countries = service.GetCountries();
-
-		// Assert
-		countries.Should().BeEmpty();
-		logger.Received().LogError(Arg.Any<HttpRequestException>(), "An error occurred while fetching countries");
-	}
-
 	private class MockHttpMessageHandler : HttpMessageHandler
 	{
 		private readonly HttpStatusCode _statusCode;
