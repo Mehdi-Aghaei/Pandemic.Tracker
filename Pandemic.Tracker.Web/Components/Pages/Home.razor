@@ -1,25 +1,7 @@
-﻿@inject CountryService CountryService;
-@attribute [StreamRendering]
-@page "/"
+﻿@page "/"
 
 <PageTitle>Home</PageTitle>
 
-@if(Countries.Length == 0)
-{
-	<p><em>Loading...</em></p>
-}
-@foreach (var country in Countries)
-{
-	<p>@country.Name</p>
-	<p>@country.Cases</p>
-}
+<h1>Hello everyone!</h1>
 
-
-@code {
-	public Country[] Countries { get; set; } = [];
-
-	protected override async Task OnInitializedAsync()
-	{
-		Countries = await CountryService.GetCountriesAsync();
-	}
-}
+Welcome to Pandemic Tracker.

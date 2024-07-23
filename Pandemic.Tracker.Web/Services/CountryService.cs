@@ -3,6 +3,7 @@
 // FREE TO USE TO CONNECT THE WORLD
 // ---------------------------------------------------------------
 
+using System.Text.Json;
 using Pandemic.Tracker.Web.Models;
 
 namespace Pandemic.Tracker.Web.Services;
@@ -23,11 +24,22 @@ public class CountryService
 		_logger = logger;
 	}
 
-	public async Task<Country[]> GetCountriesAsync()
+	public List<Country> GetCountries()
 	{
-		var countries = await _httpClient.GetFromJsonAsync<Country[]>("api/countries");
+		var countries = _httpClient.GetFromJsonAsync<Country[]>("api/countries").GetAwaiter().GetResult();
 
 		_logger.LogInformation("Countries fetched successfully");
 		return [.. countries];
+	}
+
+	public List<Country> GetCountriesStatic()
+	{
+		var filePath = Path.Combine(Directory.GetCurrentDirectory(), "Data", "CountriesData.json");
+
+		var jsonData = File.ReadAllText(filePath);
+
+		var countries = JsonSerializer.Deserialize<List<Country>>(jsonData, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+
+		return countries!;
 	}
 }
