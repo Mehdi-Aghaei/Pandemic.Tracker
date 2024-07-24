@@ -1,0 +1,36 @@
+﻿@page "/line-chart"
+@rendermode InteractiveServer
+@inject CountryService CountryService
+
+
+<ApexChart TItem="Country">
+    <ApexPointSeries TItem="Country"
+                     Items="Countries"
+                     Name="Cases"
+                     SeriesType="SeriesType.Line"
+                     XValue="e => e.CreatedDate"
+                     YValue="e => (decimal)e.Cases" />
+
+    <ApexPointSeries TItem="Country"
+                     Items="Countries"
+                     Name="Deaths"
+                     SeriesType="SeriesType.Line"
+                     XValue="e => e.CreatedDate"
+                     YValue="e => (decimal)e.Deaths" />
+
+    <ApexPointSeries TItem="Country"
+                     Items="Countries"
+                     Name="Recovered"
+                     SeriesType="SeriesType.Line"
+                     XValue="e => e.CreatedDate"
+                     YValue="e => (decimal)e.Recovered" />
+</ApexChart>
+
+@code {
+    public List<Country> Countries { get; set; } = [];
+
+    protected override void OnInitialized()
+    {
+        Countries = CountryService.GetCountriesStatic().Take(20).ToList();
+    }
+}

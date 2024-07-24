@@ -1,0 +1,21 @@
+﻿@page "/scatter-plot"
+@rendermode InteractiveServer
+@inject CountryService CountryService
+
+<ApexChart TItem="Country">
+    <ApexPointSeries TItem="Country"
+                     Items="Countries"
+                     Name="Cases vs Population"
+                     SeriesType="SeriesType.Scatter"
+                     XValue="e => (decimal)e.Population"
+                     YValue="e => (decimal)e.Cases" />
+</ApexChart>
+
+@code {
+    public List<Country> Countries { get; set; } = [];
+
+    protected override void OnInitialized()
+    {
+        Countries = CountryService.GetCountriesStatic().Take(20).ToList();
+    }
+}

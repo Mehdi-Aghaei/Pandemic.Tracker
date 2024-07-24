@@ -1,0 +1,20 @@
+﻿@page "/heat-map"
+@rendermode InteractiveServer
+@inject CountryService CountryService
+
+<ApexChart TItem="Country">
+    <ApexPointSeries TItem="Country"
+                       Items="Countries"
+                       SeriesType="SeriesType.Heatmap"
+                       XValue="e => e.Name"
+                       YValue="e => (decimal)e.CasesPerOneMillion" />
+</ApexChart>
+
+@code {
+    public List<Country> Countries { get; set; } = [];
+
+    protected override void OnInitialized()
+    {
+        Countries = CountryService.GetCountriesStatic().Take(20).ToList();
+    }
+}

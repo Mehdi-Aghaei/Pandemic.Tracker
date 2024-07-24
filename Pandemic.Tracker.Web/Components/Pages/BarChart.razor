@@ -1,0 +1,35 @@
+﻿@page "/bar-chart"
+@rendermode InteractiveServer
+@inject CountryService CountryService
+
+<ApexChart TItem="Country" Title="Country Data">
+    <ApexPointSeries TItem="Country"
+                     Items="Countries"
+                     Name="Cases"
+                     SeriesType="SeriesType.Bar"
+                     XValue="e => e.Name"
+                     YValue="e=> (decimal)e.Cases" />
+
+    <ApexPointSeries TItem="Country"
+                     Items="Countries"
+                     Name="Deaths"
+                     SeriesType="SeriesType.Bar"
+                     XValue="e => e.Name"
+                     YValue="e=> (decimal)e.Deaths" />
+
+    <ApexPointSeries TItem="Country"
+                     Items="Countries"
+                     Name="Recovered"
+                     SeriesType="SeriesType.Bar"
+                     XValue="e => e.Name"
+                     YValue="e=> (decimal)e.Recovered" />
+</ApexChart>
+
+@code {
+    public List<Country> Countries { get; set; } = [];
+
+    protected override void OnInitialized()
+    {
+        Countries = CountryService.GetCountriesStatic().Take(20).ToList();
+    }
+}

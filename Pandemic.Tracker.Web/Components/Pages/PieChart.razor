@@ -1,0 +1,22 @@
+﻿@page "/pie-chart"
+@rendermode InteractiveServer
+@inject CountryService CountryService
+
+<ApexChart TItem="Country" Title="Countries recovered per one million">
+
+    <ApexPointSeries TItem="Country"
+                     Items="Countries"
+                     Name="Recovered"
+                     SeriesType="SeriesType.Pie"
+                     XValue="e => e.Name"
+                     YValue="e => (decimal)e.RecoveredPerOneMillion" />
+</ApexChart>
+
+@code {
+    public List<Country> Countries { get; set; } = [];
+
+    protected override void OnInitialized()
+    {
+        Countries = CountryService.GetCountriesStatic().Take(10).ToList();
+    }
+}

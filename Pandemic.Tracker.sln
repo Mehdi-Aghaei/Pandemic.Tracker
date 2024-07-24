@@ -1,11 +1,10 @@
-﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34607.119
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pandemic.Tracker.Web", "Pandemic.Tracker.Web\Pandemic.Tracker.Web.csproj", "{A49F7E08-3CEB-45C8-8855-CBDC46EA567E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pandemic.Tracker.Web", "Pandemic.Tracker.Web\Pandemic.Tracker.Web.csproj", "{A49F7E08-3CEB-45C8-8855-CBDC46EA567E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pandemic.Tracker.Web.Unit.Tests", "Pandemic.Tracker.Web.Unit.Tests\Pandemic.Tracker.Web.Unit.Tests.csproj", "{B5F4D6C2-02A6-495A-9574-6CE2AC35595B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pandemic.Tracker.Web.Unit.Tests", "Pandemic.Tracker.Web.Unit.Tests\Pandemic.Tracker.Web.Unit.Tests.csproj", "{B5F4D6C2-02A6-495A-9574-6CE2AC35595B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,3 +28,4 @@ Global
 		SolutionGuid = {04F50B84-66C3-4DFA-8D96-B86DAF0892D4}
 	EndGlobalSection
 EndGlobal
+bal
