@@ -8,7 +8,7 @@ using Pandemic.Tracker.Web.Models;
 
 namespace Pandemic.Tracker.Web.Services;
 
-public class CountryService
+public class CountryService : ICountryService
 {
 	private readonly HttpClient _httpClient;
 

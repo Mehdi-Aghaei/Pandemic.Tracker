@@ -13,7 +13,7 @@ builder.Services.AddRazorComponents()
 	.AddInteractiveServerComponents();
 
 builder.Services.AddHttpClient();
-builder.Services.AddScoped<CountryService>();
+builder.Services.AddSingleton<ICountryService, CountryService>();
 
 var app = builder.Build();
 
