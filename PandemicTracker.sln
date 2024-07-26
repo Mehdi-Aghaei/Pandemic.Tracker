@@ -1,0 +1,27 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35122.118
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pandemic.Tracker.Web.Unit.Tests", "Pandemic.Tracker.Web.Unit.Tests\Pandemic.Tracker.Web.Unit.Tests.csproj", "{5D7A1436-B28C-00B7-E384-6F38E04B231B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pandemic.Tracker.Web", "Pandemic.Tracker.Web\Pandemic.Tracker.Web.csproj", "{E08A03AE-781F-82C9-3388-216B8FF28E9D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5D7A1436-B28C-00B7-E384-6F38E04B231B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D7A1436-B28C-00B7-E384-6F38E04B231B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D7A1436-B28C-00B7-E384-6F38E04B231B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D7A1436-B28C-00B7-E384-6F38E04B231B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E08A03AE-781F-82C9-3388-216B8FF28E9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E08A03AE-781F-82C9-3388-216B8FF28E9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E08A03AE-781F-82C9-3388-216B8FF28E9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E08A03AE-781F-82C9-3388-216B8FF28E9D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
