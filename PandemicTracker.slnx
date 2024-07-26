@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Pandemic.Tracker.Web.Unit.Tests\Pandemic.Tracker.Web.Unit.Tests.csproj" />
+  <Project Path="Pandemic.Tracker.Web\Pandemic.Tracker.Web.csproj" />
+</Solution>
