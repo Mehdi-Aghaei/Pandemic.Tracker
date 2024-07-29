@@ -1,10 +1,10 @@
-name: Build and deploy .NET Core application to Web App PandemicTrackerWeb20240729220640
+name: Build and deploy .NET Core application to Web App PandemicTracker
 on:
   push:
     branches:
     - main
 env:
-  AZURE_WEBAPP_NAME: PandemicTrackerWeb20240729220640
+  AZURE_WEBAPP_NAME: PandemicTracker
   AZURE_WEBAPP_PACKAGE_PATH: Pandemic.Tracker.Web/published
   CONFIGURATION: Release
   DOTNET_CORE_VERSION: 8.0.x
@@ -44,5 +44,5 @@ jobs:
       uses: azure/webapps-deploy@v2
       with:
         app-name: ${{ env.AZURE_WEBAPP_NAME }}
-        publish-profile: ${{ secrets.PandemicTrackerWeb20240729220640_A242 }}
+        publish-profile: ${{ secrets.PandemicTracker_3F2C }}
         package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
