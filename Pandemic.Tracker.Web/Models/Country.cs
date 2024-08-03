@@ -7,7 +7,6 @@ namespace Pandemic.Tracker.Web.Models;
 
 public class Country
 {
-	public Guid Id { get; set; }
 	public string Name { get; set; } = default!;
 	public string Iso3 { get; set; } = default!;
 	public string Continent { get; set; } = default!;
@@ -20,8 +19,8 @@ public class Country
 	public int Population { get; set; }
 	public int CasesPerOneMillion { get; set; }
 	public int DeathsPerOneMillion { get; set; }
-	public float RecoveredPerOneMillion { get; set; }
-	public float CriticalPerOneMillion { get; set; }
+	public double RecoveredPerOneMillion { get; set; }
+	public double CriticalPerOneMillion { get; set; }
 	public DateTimeOffset CreatedDate { get; set; }
 	public DateTimeOffset UpdatedDate { get; set; }
 }

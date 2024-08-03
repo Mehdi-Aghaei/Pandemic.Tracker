@@ -9,6 +9,9 @@ namespace Pandemic.Tracker.Web.Services;
 
 public interface ICountryService
 {
-    List<Country> GetCountries();
-    List<Country> GetCountriesStatic();
+	List<Country> GetCountries();
+
+	List<Country> GetCountriesFromOriginalSource();
+
+	List<Country> GetCountriesStatic();
 }

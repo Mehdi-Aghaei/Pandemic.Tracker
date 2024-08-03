@@ -30,6 +30,10 @@
 
     protected override void OnInitialized()
     {
-        Countries = CountryService.GetCountriesStatic().Take(20).ToList();
+        Countries = CountryService.GetCountriesFromOriginalSource().Take(20).ToList();
+        if (Countries.Count is 0)
+		{
+			Countries = CountryService.GetCountriesStatic().Take(20).ToList();
+		}
     }
 }
